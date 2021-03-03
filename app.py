@@ -1,4 +1,3 @@
-from analytics import firestore
 from inspect import Traceback
 from pickle import NONE
 import pickle
@@ -25,7 +24,6 @@ from bokeh.models.widgets import Div
 import numpy as np
 import io
 from st_aggrid import AgGrid, DataReturnMode, GridUpdateMode, GridOptionsBuilder
-import analytics
 import json,datetime
 
 
