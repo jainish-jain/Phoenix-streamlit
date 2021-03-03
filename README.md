@@ -1,4 +1,4 @@
-# <img src="favicon.png" width="500px" height="450px" style="zoom:12%;" /> A  Generalized Machine Learning Application
+# <img src="favicon.png" width="50px" height="45px"/> A  Generalized Machine Learning Application
 
 
 
@@ -33,8 +33,8 @@ Phoenix: A Generalized Machine Learning Applications is designed and engineered 
 **Note: You only need to install Phoenix if you want to contribute or run it locally. If you just want to use it, go [here](https://phoenix-streamlit.herokuapp.com/).**
 
 ```shell
-git clone https://github.com/jainish-jain/Phoenix.git
-cd Phoenix-main
+git clone https://github.com/jainish-jain/Phoenix-streamlit.git
+cd Phoenix-streamlit
 pip install -r requirements.txt
 ```
 
