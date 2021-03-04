@@ -17,7 +17,6 @@ Phoenix: A Generalized Machine Learning Applications is designed and engineered 
 ```python
 📦Phoenix-streamlit
  ┣ 📂Model
- ┃ ┗ 📜temp
  ┣ 📜app.py
  ┣ 📜code.py
  ┣ 📜datatool.py
