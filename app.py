@@ -1,3 +1,4 @@
+from analytics import firestore
 from inspect import Traceback
 from pickle import NONE
 import pickle
@@ -24,6 +25,7 @@ from bokeh.models.widgets import Div
 import numpy as np
 import io
 from st_aggrid import AgGrid, DataReturnMode, GridUpdateMode, GridOptionsBuilder
+import analytics
 import json,datetime
 
 
@@ -158,7 +160,6 @@ def btndf(btnname,link):
 
 if __name__=="__main__":
 
-    
     tmp_csv=upload_csv()     
 
     data_tool_level=st.sidebar.subheader("Data Tools")
@@ -435,11 +436,11 @@ if __name__=="__main__":
             
             dv=st.markdown("<h3>Data Validation: </h3>",unsafe_allow_html=True) if (tar and tar!=" ") else None
             if (tar and tar!=" ") and st.checkbox("train_test_split") :
-                para_ts=st.number_input("test_size",min_value=0.0,value=0.25,max_value=1.00)
-                para_trs=st.number_input("train_size",min_value=0.0,value=(1-para_ts),max_value=(1-para_ts))
-                para_rs_str=st.text_input("random_state",value=None)
+                para_ts=st.number_input("test_size",min_value=0.0,value=0.25,max_value=1.00,key="tts")
+                para_trs=st.number_input("train_size",min_value=0.0,value=(1-para_ts),max_value=(1-para_ts),key="tts")
+                para_rs_str=st.text_input("random_state",value=None,key="tts")
                 para_rs=(int(para_rs_str) if (para_rs_str!=None and para_rs_str.isnumeric()) else None)
-                para_s=st.selectbox("shuffle",[True,False])
+                para_s=st.selectbox("shuffle",[True,False],key="tts")
                 
                 X_train, X_test, Y_train, Y_test = train_test_split(df[dep], df[tar], test_size=para_ts,train_size=para_trs,random_state=para_rs,shuffle=para_s)
                 tts=st.info(f"X_train: {X_train.shape},  X_test: {X_test.shape},  Y_train: {Y_train.shape},  Y_test: {Y_test.shape}")
@@ -764,5 +765,4 @@ if __name__=="__main__":
         if m[0]=='success' and st.checkbox("Build Pickle Model"):
             st.markdown(models.download_button(choose_algo) , unsafe_allow_html=True)
     except:pass
-    
-    
+ 
