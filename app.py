@@ -159,7 +159,6 @@ def btndf(btnname,link):
 
 
 if __name__=="__main__":
-
     tmp_csv=upload_csv()     
 
     data_tool_level=st.sidebar.subheader("Data Tools")
@@ -198,8 +197,8 @@ if __name__=="__main__":
             check1.text("Entries in not Na")
             check1.dataframe(fnc_globaldf.globaldf.notna())
         if check1.checkbox("unique"):
-            col=check1.selectbox("Choose Column",[*fnc_globaldf.globaldf.columns],key="unique")
-            check1.dataframe(fnc_globaldf.globaldf[col].unique())
+            col=check1.selectbox("Choose Column",["",*fnc_globaldf.globaldf.columns],key="unique")
+            check1.dataframe(fnc_globaldf.globaldf[col].unique()) 
         if check1.checkbox("labelencoder"):
             col=check1.multiselect("Choose Column",[*fnc_globaldf.globaldf.columns],key="labelencoder")
             fnc_globaldf.globaldf=labelencoder(col)
@@ -352,7 +351,7 @@ if __name__=="__main__":
         if check2.checkbox('heatmap'):
             col2=check2.multiselect("Choose",["",*fnc_globaldf.globaldf.columns],key="heatmap")
             try:
-                fig=check2.plotly_chart(px.imshow(fnc_globaldf.globaldf[col2]))
+                fig=check2.plotly_chart(px.imshow(fnc_globaldf.globaldf[col2])) if col2 !="" else None
             except:
                 e=sys.exc_info()
                 check2.error(e)
@@ -475,9 +474,9 @@ if __name__=="__main__":
                     st.write("Score")
                     st.success(m[1])
                     st.write("Coef_")
-                    st.success(list(m[2]))
+                    st.success(str(list(map(list,m[2])))[1:-1])
                     st.write("Intercept_")
-                    st.success(m[3])
+                    st.success(str(list(m[3]))[1:-1])
 
                     st.markdown("<h3> Metrics :</h3>",unsafe_allow_html=True)
                     st.write("Mean_Absolute_Error")
@@ -526,10 +525,12 @@ if __name__=="__main__":
                     st.markdown("<h3>Attributes :</h3>",unsafe_allow_html=True)
                     st.write("Score")
                     st.success(m[1])
+    
                     st.write("Coef_")
-                    st.success(list(*m[2]))
+                    st.success(str(list(map(list,m[2])))[1:-1])
+                     
                     st.write("Intercept_")
-                    st.success(*m[3])
+                    st.success(str(list(m[3]))[1:-1])
                     
                     st.markdown("<h3> Metrics :</h3>",unsafe_allow_html=True)
                     st.write("Classification_Report")
