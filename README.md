@@ -2,7 +2,27 @@
 
 
 
-Phoenix: A Generalized Machine Learning Applications is designed and engineered for machine learning enthusiast who finds difficulty to write the program and perform actions based on the dataset. It is a web application that provides a graphical user interface to perform process & cleanse actions on the dataset, visualize data on univariate and multivariate graphs and build machine learning models. The processed data frame, visuals, and pickle models are available to download. The application is based on the python web framework [streamlit](https://streamlit.io). The application would provide the capabilities of using and integrate machine learning models with ease for the beginner as well as for the nontechnical enthusiast, as an initial stage to start machine learning to understand the model and code which might be difficult to understand and slow to grasp as a beginner. The main ideology is to abstract the program or the algorithm code from the user and allow a graphical user interface so that the user can perform action to the model with ease and available to download and share. 
+Phoenix: A Generalized Machine Learning Applications is designed and engineered for machine learning enthusiast who finds difficulty to write the program and perform actions based on the dataset. It is a web application that provides a graphical user interface to perform process & cleanse actions on the dataset, visualize data on univariate and multivariate graphs and build machine learning models. The application is based on the python web framework [streamlit](https://streamlit.io) . The main ideology is to abstract the program or the algorithm code from the user and allow a graphical user interface so that the user can perform an action to the model with ease and available to download and share. The application would provide the capabilities of using and integrate machine learning models with ease for the beginner as well as for the nontechnical enthusiast, as an initial stage to start machine learning to understand the model and code which might be difficult to understand and slow to grasp as a beginner. 
+
+
+
+### Demonstration
+
+![](gifs\csv_dataset.gif)
+
+
+
+![](gifs\process_and_cleaning.gif)
+
+
+![](gifs\eda.gif)
+
+
+![](gifs\algorithm.gif)
+
+
+
+![](gifs\pickle.gif)
 
 
 
