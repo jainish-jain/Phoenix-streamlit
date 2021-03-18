@@ -8,21 +8,20 @@ Phoenix: A Generalized Machine Learning Applications is designed and engineered 
 
 ### Demonstration
 
-![](gifs\csv_dataset.gif)
-<img src="gifs/csv_dataset.gif">
+![](gifs/csv_dataset.gif)
 
 
-![](gifs\process_and_cleaning.gif)
+![](gifs/process_and_cleaning.gif)
 
 
 ![](gifs/eda.gif)
 
 
-![](gifs\algorithm.gif)
+![](gifs/algorithm.gif)
 
 
 
-![](gifs\pickle.gif)
+![](gifs/pickle.gif)
 
 
 
