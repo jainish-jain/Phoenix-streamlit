@@ -2,7 +2,7 @@ scipy==1.5.0
 numpy==1.18.5
 streamlit_aggrid==0.1.9
 plotly==4.12.0
-streamlit==0.76.0
+streamlit==1.11.1
 pandas==1.0.5
 bokeh==2.2.3
 streamlit_ace==0.0.4
