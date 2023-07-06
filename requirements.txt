@@ -1,4 +1,4 @@
-scipy==1.5.0
+scipy==1.10.0
 numpy==1.22.0
 streamlit_aggrid==0.1.9
 plotly==4.12.0
